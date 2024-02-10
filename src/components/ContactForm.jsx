@@ -22,13 +22,16 @@ function ContactForm() {
     event.preventDefault();
   
     try {
-      const response = await fetch('/send-email', {
+      const response = await fetch('https://website-je-server-5783.onrender.com//send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
-      });
+      })
+      .then(response => response.json())
+.then(data => console.log(data))
+.catch((error) => console.error('Error:', error));
   
       if (response.ok) {
         alert('Email sent successfully!');
