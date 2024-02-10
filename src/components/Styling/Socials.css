@@ -1,0 +1,27 @@
+/* Add this to your CSS file */
+#socials {
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #2f1d4394;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem;
+  }
+  
+  #socials h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    
+  }
+  
+  .social-links {
+    align-items: center;
+    display:inline;
+  }
+  
+  .social-links img {
+    width: auto;
+    height: 40px;
+    margin: 0rem 4rem 2rem 4rem;
+  }
+  

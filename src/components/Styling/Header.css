@@ -1,0 +1,60 @@
+
+.navbar {
+  background: linear-gradient(40deg, #000000c3, #0000007c);
+  color: white;
+  padding: 0rem 1rem 0rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:9%;
+  position: fixed;
+  width: 100%; 
+  font-family: "Roboto Condensed", sans-serif;
+  z-index: 1000;
+  transition: height 0.5s ease-in-out; /*Add a smooth transition effect for height changes */
+}
+
+/* Styles for the scrolled state */
+.navbar.scrolled {
+  height: 50px; 
+  padding: 0.5rem; 
+}
+
+
+.navbar h1 {
+  text-transform:uppercase;
+  color:#ffffff
+}
+
+.logo {
+  margin-top: 0.5rem;
+  width: 90px; /* Set the width of the logo */
+  transition: transform 0s ease-in-out;
+}
+
+.logo.small {
+  transform: scale(0.5); /* Adjust the scale factor as needed */
+  margin-top: 0.25rem;
+}
+.logo-img {
+  max-width: 90px;
+  height: auto;
+}
+
+.navbar nav ul {
+    list-style: none;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+  
+.navbar nav li {
+   margin: 0 1rem;
+}
+  
+.navbar nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.893);
+  font-weight: bold;
+}

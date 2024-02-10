@@ -1,0 +1,10 @@
+.about {
+    background-color: #393e43b7;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .profile-img {
+    width: 300px; 
+    border-radius: 20px;
+  }
