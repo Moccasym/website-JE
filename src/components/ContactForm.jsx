@@ -22,7 +22,7 @@ function ContactForm() {
     event.preventDefault();
   
     try {
-      const response = await fetch('/send-email', {
+      const response = await fetch('https://website-je-server-5783.onrender.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
