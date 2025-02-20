@@ -1,4 +1,3 @@
-
 .navbar {
   background: linear-gradient(40deg, #000000c3, #0000007c);
   color: white;
@@ -11,19 +10,21 @@
   width: 100%; 
   font-family: "Roboto Condensed", sans-serif;
   z-index: 1000;
-  transition: height 0.5s ease-in-out; /*Add a smooth transition effect for height changes */
+  transition: transform 0.3s ease-in-out;
 }
-@media (max-width: 768px) {
-  .navbar {
-    font-size: 8px; /* Adjust font size for smaller screens */
-  }
-}
+
 /* Styles for the scrolled state */
 .navbar.scrolled {
   height: 50px; 
   padding: 0.5rem; 
 }
 
+/* Hide navbar on scroll down (desktop only) */
+@media (min-width: 769px) {
+  .navbar.hide {
+    transform: translateY(-100%);
+  }
+}
 
 .navbar h1 {
   text-transform:uppercase;
@@ -62,3 +63,101 @@
   color: rgba(255, 255, 255, 0.893);
   font-weight: bold;
 }
+
+/* Mobile-only styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 4%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navbar-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-bottom nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+  }
+
+  .navbar-bottom nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Hide top section when scrolled */
+  .navbar.scrolled .navbar-top {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .navbar.scrolled .navbar-bottom {
+    border-top: none;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .logo-img {
+    max-width: 70px;
+  }
+
+  .navbar h1 {
+    display: none; /* Hide heading */
+  }
+
+  .menu-button {
+    display: block; /* Show hamburger menu */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 12px;
+    padding: 0rem 0.25rem;
+    gap: 2%;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .logo-img {
+    max-width: 50px;
+  }
+
+  .navbar nav ul {
+    gap: 0.25rem;
+  }
+
+  .navbar nav li {
+    margin: 0 0.25rem;
+  }
+
+  .navbar.scrolled {
+    height: 40px;
+    padding: 0.25rem;
+  }
+}
+
+
