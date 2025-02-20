@@ -1,23 +1,44 @@
   .home {
     text-align: center;
-    padding: 110px; 
+    padding: 5vw; /* Adjust padding for responsiveness */
     display: flex;
-    flex-direction: column; /* Adjust as needed based on your layout */
+    flex-direction: column;
     align-items: center;
-    z-index:1;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    .home {
+      /* Adjust centering styles for smaller screens */
+      justify-content: center;
+    }
   }
   
   .home h1 {
     margin: auto;
+  font-size: 3rem; /* Adjust font size for smaller screens */
+  /* Other styles */
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 5rem;
     color: #030303;
     filter: drop-shadow(0 12px 10px rgba(148, 148, 148, 0.654));
     margin-bottom: 3rem;
+    
   }
+
+  @media screen and (max-width: 768px) {
+    /* Apply styles for smaller screens (e.g., phones) */
+    .home h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  }  
   
   .home p {
     margin: 0;
+  font-size: 1rem; /* Adjust font size for smaller screens */
+  /* Other styles */
     font-size: 1.5rem;
     color: #201f21;
     font-family: "Roboto Condensed", sans-serif;
@@ -25,11 +46,16 @@
   }
 
   .home-content {
-    max-width: 1800px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+     max-width: 90%; 
+    width:100;
+  }
+
+  @media (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+    .home-content {
+      /* Adjust centering styles for smaller screens */
+      justify-content: center;
+    }
   }
 
   .image-container {
@@ -43,7 +69,7 @@
   }
   
   .JE-profile, .JE-logo {
-    width: 200px; /* Adjust size as necessary */
+    width: 20vw; /* Adjust width for responsiveness */
     height: auto;
     position: absolute;
     transition: transform 0.5s ease; /* Optional: For a smooth transition on hover */

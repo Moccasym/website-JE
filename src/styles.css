@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
+
 body {
   background-color: #ffffff;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  body {
+    /* Adjust centering styles for smaller screens */
+    justify-content: center;
+  }
 }
 
 * {
@@ -23,19 +31,38 @@ html {
   min-height: 80rem;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    justify-content: center;
+  }
+}
+
 main {
   width: 90%;
   max-width: 65rem;
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  main {
+    /* Adjust centering styles for smaller screens */
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  #core-concepts {
+    /* Adjust centering styles for smaller screens */
+    justify-content: center;
+  }
+}
 #core-concepts {
-  padding: 4rem;
+  padding: 2rem; 
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 30px;
-  /* background-color: #2d3743eb;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,17 +76,22 @@ main {
 }
 
 .group-container {
-  padding: 5rem 3rem 5rem 3rem;
-  margin: 3rem 3rem 3rem 3rem;
-  position: relative;
-  width: 100%;
+  padding: 2rem; /* Adjust padding for smaller screens */
+  margin: 1rem;
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
   box-sizing: border-box;
   border-radius: 10px;
   background-color:#0000007d;
-  
+}
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  .group-container {
+    /* Adjust centering styles for smaller screens */
+    justify-content: center;
+  }
 }
 
 .core-concepts-list {
@@ -72,7 +104,7 @@ main {
 }
 
 .core-concept-item {
-  width: 30%;
+  width: 45%; /* Adjust item width for smaller screens */
   text-align: center;
   background: linear-gradient(45deg, #4c4c4c, #1a1a1a);
   padding: 0.8rem;
@@ -81,6 +113,11 @@ main {
   transition: transform 0.5s ease, filter 0.5s ease, z-index 0s ease;
   position: relative; /* Adjust for dynamic positioning */
   z-index: 0; /* Default z-index */
+}
+@media (min-width: 768px) {
+  .core-concept-item {
+    width: 30%; /* Reset width for larger screens */
+  }
 }
 
 .core-concept-item img {
@@ -106,4 +143,12 @@ main {
 
 .core-concept-item:not(.highlighted) {
   filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  .container {
+    /* Adjust centering styles for smaller screens */
+    justify-content: center;
+  }
 }

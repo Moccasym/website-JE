@@ -13,7 +13,11 @@
   z-index: 1000;
   transition: height 0.5s ease-in-out; /*Add a smooth transition effect for height changes */
 }
-
+@media (max-width: 768px) {
+  .navbar {
+    font-size: 8px; /* Adjust font size for smaller screens */
+  }
+}
 /* Styles for the scrolled state */
 .navbar.scrolled {
   height: 50px; 
